@@ -1,0 +1,32 @@
+{% extends 'layout2.html' %}
+
+{% block title %} College University Courses {% endblock %}
+
+{% block content %}
+<h2>College University Courses</h2>
+    <div>
+    <p>These are the courses you are currently teaching for the {{ profcourses['term_id'] }} semester.</p>
+        <table>
+            <tr>
+                <td>
+                 <a href="{{ url_for('studentsinclass') }}">
+                     {{profcourses['course_1']}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <a href="{{ url_for('studentsinclass2') }}">
+                {{profcourses['course_2']}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <a href="{{ url_for('studentsinclass3') }}">
+                    {{profcourses['course_3']}}</a>
+                </td>
+            </tr>
+            
+    </table>
+</div>
+{% endblock %}
+

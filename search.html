@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %} Search {% endblock %}
+
+{% block content %}
+<h2>Search</h2>
+    <div>
+    <body>
+        <p>Search below for available courses</p>
+        <form class="example" method="post" action=""
+         style="margin:auto;max-width:600px">
+            <input type="text" placeholder="Search by course code" name="search" id="search">
+            <button type="submit"><i class="fa fa-search"></i>
+            </button>
+        </form>
+
+
+       {% for item in data %}
+            <tr>
+                <td>{{item['course_code']}} - {{item['name']}}</td>
+                </br>
+            </tr>
+        {% endfor %}
+    </body>
+    </div>
+
+
+{% endblock %}
+

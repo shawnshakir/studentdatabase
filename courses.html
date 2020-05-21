@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %} Courses {% endblock %}
+
+{% block content %}
+<h2>Courses</h2>
+    <div>
+    <p>These are the courses you are currently enrolled in for the {{ courses['term_id'] }} semester</p>
+        <table>
+            <tr>
+                <td>{{courses['course_1']}}</td>
+            </tr>
+            <tr>
+                <td>{{courses['course_2']}}</td>
+            </tr>
+            <tr>
+                <td>{{courses['course_3']}}</td>
+            </tr>
+            <tr>
+                <td>{{courses['course_4']}}</td>
+            </tr>
+            <tr>
+                <td>{{courses['course_5']}}</td>
+            </tr>
+    </table>
+</div>
+{% endblock %}
+

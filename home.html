@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %} Student Homepage {% endblock %}
+
+{% block content %}
+<h2>Welcome to College University!</h2>
+    <div>
+<p>Welcome back, {{ students['first_name'] }}&nbsp;{{ students['last_name'] }}!</p>
+<p>Major: {{ students['major'] }}</p>
+    <p>Minor: {{ students['minor'] }}</p>
+    </div>
+
+{% endblock %}
+

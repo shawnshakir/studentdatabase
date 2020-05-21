@@ -1,0 +1,23 @@
+{% extends 'layout2.html' %}
+
+
+{% block title %} Student Roster {% endblock %}
+
+{% block content %}
+<h2>College University Student Roster</h2>
+    <div>
+    <p>Here is the list of the students currently enrolled in {{ profcourses['course_1']}}. </p>
+        {% for item in studentsinclass %}
+            <tr>
+                <td>{{item['first_name']}} {{item['last_name']}} -{{ item['student_id']}}
+                    <form action="{{ url_for('drop', students_id=item.student_id, course_code=profcourses.course_1) }}" method=post >
+                      <input type="submit" value="Drop">
+                    </form>
+                </td>
+                </br>
+            </tr>
+        {% endfor %}
+
+</div>
+{% endblock %}
+
